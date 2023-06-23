@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Text and Images</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap");
+
+        * {
+            font-family: "Comfortaa", cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 9rem;
+        }
+
+        html ::-webkit-scrollbar {
+            width: 0.5rem;
+        }
+
+        html ::-webkit-scrollbar-thumb {
+            background: #FFCA2C;
+        }
+
+        body {
+            background: linear-gradient(rgba(17, 17, 17, 0.7), rgba(17, 17, 17, 0.7)), url(../images/cuisine.jpg) no-repeat;
+            overflow-x: hidden;
+            background-size: cover;
+            background-position: center;
+        }
+
+        section {
+            padding: 3rem 9%;
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .header span {
+            color: #FFCA2C;
+            font-size: 4rem;
+            font-weight: 900;
+        }
+
+        .heading h1 {
+            font-size: 3.5rem;
+            color: #000;
+        }
+
+        .btn {
+            margin-top: 1rem;
+            display: inline-block;
+            padding: 1rem 3rem;
+            font-size: 1.7rem;
+            color: #FFCA2C;
+            border: 0.2rem solid #FFCA2C;
+            border-radius: 5rem;
+            cursor: pointer;
+            background: none;
+        }
+
+        .btn:hover {
+            background: #FFCA2C;
+            color: #f8f9fc;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1100;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.5rem 9%;
+            box-shadow: 0 1px 6px 0 rgba(32 32 36 / 28%);
+        }
+
+        .header .navbar a {
+            font-size: 1.7rem;
+            color: #3d3d3d;
+            display: inline-block;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .header .navbar a:hover {
+            color: #FFCA2C;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            color: #000;
+            font-weight: bolder;
+        }
+
+        .logo span {
+            color: #FFCA2C;
+        }
+
+        #menu-btn {
+            font-size: 2.5rem;
+            color: #000;
+            cursor: pointer;
+            display: none;
+        }
+
+        .container {
+            background: #222;
+            color: #fff;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            max-width: 800px;
+            height: 100vh;
+            margin: auto;
+            position: relative;
+        }
+
+        #textBox {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #fff;
+            padding: 10px;
+        }
+
+        #prevText {
+            position: absolute;
+            left: 50%;
+            bottom: 30%;
+            transform: translate(-50%);
+            width: 90%;
+            font-size: 32px;
+            text-align: center;
+            text-shadow: 2px 2px 20px #000;
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translate(-50%);
+            cursor: pointer;
+        }
+
+        .share {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .share p {
+            font-size: 3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            margin-top: 100px;
+        }
+
+        .share h3 {
+            font-size: 1.5rem;
+            color: #fff;
+            line-height: 1.8rem;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                height: auto;
+                padding: 2rem;
+            }
+
+            .icon {
+                bottom: 50px;
+            }
+
+            .share p {
+                font-size: 2rem;
+            }
+
+            .share h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <a href="#" data-aos="zoom-in-left" data-aos-delay="150" class="logo" style="text-decoration: none;">
+            <span>dishCovery</span>
+        </a>
+        <nav class="navbar">
+            <a href="../index.html" data-aos="zoom-in-left" data-aos-delay="300">Home</a>
+        </nav>
+        <a href="#book-form" class="" data-aos="zoom-in-left" data-aos-delay="1200"
+            style="text-decoration: none; color: transparent;">book now</a>
+    </header>
+    <div class="share">
+        <p>Welcome to dishCovery Sharing feature!</p>
+        <h3> Join our vibrant Recipe Recommendation Engine and Sharing Platform, where food enthusiasts gather to
+            connect, inspire, and share their culinary masterpieces. Experience the joy of recipe sharing and
+            posting, as you showcase your favorite creations and gather inspiration from a community of
+            passionate cooks.</h3>
+    </div>
+    <div class="container" id="imgBox">
+        <div id="prevText"></div>
+        <textarea name="" id="textBox" placeholder="Title of your recipe:"></textarea>
+        <input type="file" accept="image/*" alt="" name="image" id="file" style="display: none;"
+            onchange="loadFile(event)">
+        <label for="file"><img src="up.jpg" alt="" class="icon"></label>
+    </div>
+    <script>
+        var textBox = document.getElementById("textBox");
+        var imgBox = document.getElementById("imgBox");
+        var imageData = null;
+
+        textBox.onkeyup = textBox.onkeypress = function () {
+            document.getElementById("prevText").innerHTML = this.value;
+        };
+
+        var loadFile = function (event) {
+            imgBox.style.backgroundImage = "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+            imageData = event.target.files[0];
+        };
+    </script>
+</body>
+
+</html>
